@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" 
     content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="image/bbiircan.png" type="image/x-icon">
     <!-- Css -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/generator.css">
+    <link rel="stylesheet" href="./css/scanner.css">
+
     <!-- Font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Qr Code</title>
@@ -15,11 +18,11 @@
     <div class="container">
         <!-- Nav -->
         <nav>
-            <button class="nav-gene">Generator<button>
+            <button class="nav-gene active">Generator<button>
                 <button class="nav-scan">Scanner<button>   
         </nav>
         <!-- Generator -->
-        <div class="generator">
+        <div class="generator" style="display: none;">
             <h1>QR Code Generator</h1>
             <p>Paste a url or center text to create QR code</p>
 
@@ -29,7 +32,7 @@
             </div>
 
             <div class="generator-img">
-                <img src="" alt="qr-code">
+                <img src="image/bbiircan.png" alt="qr-code">
             </div>
 
             <div class="generator-btn">
@@ -44,10 +47,10 @@
                 <i class="fa-solid fa-circle-stop"></i>
             </h1>
 
-            <form>
-                <input type="file" accept="image/*">
+            <form class="scanner-form">
+                <input type="file" accept="image/*" hidden>
 
-                <img src="" alt="qr-code">
+                <img src="image/bbiircan.png" alt="qr-code">
                 <video></video>
 
                 <div class="content">
@@ -69,5 +72,6 @@
 
     <!-- Javascript -->
      <script src="./js/main.js"></script>
+     <script src="./js/generator.js"></script>
 </body>
 </html>
