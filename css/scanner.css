@@ -1,5 +1,7 @@
 .scanner{
     overflow: hidden;
+    height: 280px;
+    transition: 0.2s;
 }
 
 .scanner h1{
@@ -89,4 +91,37 @@
 
 .scanner-details .btn button:hover{
     background: #45488f;
+}
+
+/* active scanner */
+.scanner.active{
+    height: 530px;
+}
+
+.scanner.active .scanner-form{
+    pointer-events: none;
+}
+
+/* active image */
+.scanner-form.active-img img{
+    display: block;
+}
+
+.scanner-form.active-img .content,
+.scanner-form.active-img video{
+    display: none;
+}
+
+/* active video */
+.scanner-form.active-video video{
+    display: block;
+}
+
+.scanner-form.active-video .content,
+.scanner-form.active-video img{
+    display: none;
+}
+
+.pointerEvents{
+    pointer-events: none;
 }
